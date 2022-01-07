@@ -1,3 +1,8 @@
+.hamburger-menu .menu {
+  width: 100%;
+  height: 100%;
+}
+
 *,
 *::before,
 b::after {
@@ -258,14 +263,34 @@ html {
   width: 100%;
   opacity: 0.7;
 }
+@media screen and (min-width: 640px) {
+  .about-us-left {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about-us-left {
+    display: block;
+  }
+}
 .about-us-right {
   text-align: center;
   width: 60%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0 10rem;
+}
+@media screen and (min-width: 640px) {
+  .about-us-right {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about-us-right {
+    padding: 0 10rem;
+  }
 }
 .about-us-right > * {
   margin-bottom: 3rem;
@@ -361,6 +386,51 @@ html {
   opacity: 0.8;
   font-size: 1.8rem;
   letter-spacing: 2px;
+}
+
+.hamburger-menu {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 10%;
+  right: 5%;
+  z-index: 30;
+}
+@media (max-width: 800px) {
+  .hamburger-menu {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media (max-width: 500px) {
+  .hamburger-menu {
+    width: 25px;
+    height: 25px;
+  }
+}
+.hamburger-menu .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.hamburger-menu .menu-line {
+  width: 100%;
+  height: 4px;
+  background-color: #d3ab55;
+  transform-origin: right;
+  transition: all 0.5s 0.5s;
+}
+@media (max-width: 800px) {
+  .hamburger-menu .menu-line {
+    height: 3px;
+  }
+}
+@media (max-width: 500px) {
+  .hamburger-menu .menu-line {
+    height: 2px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

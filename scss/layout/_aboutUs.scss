@@ -15,16 +15,32 @@
 
     img {
       width: 100%;
-      opacity: .7;
+      opacity: 0.7;
+    }
+
+    @media screen and (min-width: b.$sm) {
+      display: none;
+    }
+
+    @media screen and (min-width: b.$lg) {
+      display: block;
     }
   }
 
   &-right {
     text-align: center;
     width: 60%;
+    height: 80%;
     @include b.flexLayout;
     flex-direction: column;
-    padding: 0 10rem;
+
+    @media screen and (min-width: b.$sm) {
+      padding: 0;
+    }
+
+    @media screen and (min-width: b.$lg) {
+      padding: 0 10rem;
+    }
 
     & > * {
       margin-bottom: 3rem;
