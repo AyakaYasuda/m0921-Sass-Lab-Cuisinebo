@@ -1,3 +1,71 @@
+*,
+*::before,
+b::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+
+.main-heading {
+  font-family: "Dancing Script", cursive;
+  font-size: 8rem;
+  color: #d3ab55;
+}
+
+.sub-heading {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 5rem;
+  font-weight: 300;
+  color: #bbb;
+}
+
+.main-name {
+  font-family: "Nunito", sans-serif;
+  font-size: 5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #bbb;
+}
+
+.sub-name {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #bbb;
+}
+
+.main-btn {
+  background: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: #d3ab55;
+  text-transform: uppercase;
+  border: #d3ab55 1px solid;
+  padding: 1rem 1.5rem;
+}
+
+.logo {
+  border: #d3ab55 3px solid;
+  border-radius: 50%;
+  width: 116px;
+  height: 116px;
+  margin-right: 2rem;
+}
+.logo img {
+  color: #fff;
+  width: 110px;
+  height: 110px;
+}
+
 .navbar {
   position: relative;
   z-index: 20;
@@ -127,6 +195,49 @@
 
 .checkbox:checked ~ .hamburger-menu .menu-line-3 {
   transform: rotateZ(40deg);
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url(../../images/bg.jpeg);
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+}
+.header::before {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: " ";
+}
+.header .brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 20;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header .header-banner {
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.header .header-banner > * {
+  margin-bottom: 3rem;
 }
 
 /*# sourceMappingURL=main.css.map */
