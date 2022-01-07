@@ -1,3 +1,76 @@
+.hamburger-menu .menu {
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::before,
+b::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+
+.main-heading {
+  font-family: "Dancing Script", cursive;
+  font-size: 8rem;
+  color: #d3ab55;
+}
+
+.sub-heading {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 5rem;
+  font-weight: 300;
+  color: #bbb;
+}
+
+.main-name {
+  font-family: "Nunito", sans-serif;
+  font-size: 5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #bbb;
+}
+
+.sub-name {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #bbb;
+}
+
+.main-btn {
+  background: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: #d3ab55;
+  text-transform: uppercase;
+  border: #d3ab55 1px solid;
+  padding: 1rem 1.5rem;
+}
+
+.logo {
+  border: #d3ab55 3px solid;
+  border-radius: 50%;
+  width: 116px;
+  height: 116px;
+  margin-right: 2rem;
+}
+.logo img {
+  color: #fff;
+  width: 110px;
+  height: 110px;
+}
+
 .navbar {
   position: relative;
   z-index: 20;
@@ -127,6 +200,237 @@
 
 .checkbox:checked ~ .hamburger-menu .menu-line-3 {
   transform: rotateZ(40deg);
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../images/bg.jpeg);
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.header::before {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: " ";
+}
+.header .brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 20;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header .header-banner {
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.header .header-banner > * {
+  margin-bottom: 3rem;
+}
+
+.about-us {
+  width: 100%;
+  height: 90vh;
+  background-color: #262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-us-left {
+  display: block;
+  width: 40%;
+  position: relative;
+  left: -15rem;
+}
+.about-us-left img {
+  width: 100%;
+  opacity: 0.7;
+}
+@media screen and (min-width: 640px) {
+  .about-us-left {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about-us-left {
+    display: block;
+  }
+}
+.about-us-right {
+  text-align: center;
+  width: 60%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 640px) {
+  .about-us-right {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about-us-right {
+    padding: 0 10rem;
+  }
+}
+.about-us-right > * {
+  margin-bottom: 3rem;
+}
+.about-us-right .stars {
+  margin-top: 3rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  color: #d3ab55;
+}
+.about-us-right .stars i {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+.about-us-right .description {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  color: #bbb;
+  text-align: justify;
+}
+
+.cards-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 30vw);
+  position: relative;
+}
+.cards-wrapper::before {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: " ";
+}
+.cards-wrapper .card-overlay {
+  display: none;
+}
+.cards-wrapper .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.footer {
+  width: 100%;
+  height: 50vh;
+  background-color: #262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer > * {
+  margin-bottom: 8rem;
+}
+.footer-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+}
+.footer-social-media {
+  text-align: center;
+}
+.footer-social-media .social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.footer-social-media .social-media-link {
+  font-size: 3.5rem;
+  padding: 0 2rem;
+}
+.footer-social-media .social-media-link i {
+  color: #fff;
+  opacity: 0.5;
+}
+.footer-copyright {
+  margin-bottom: 0;
+}
+.footer-copyright-paragraph {
+  font-family: "Josefin Sans", sans-serif;
+  color: #bbb;
+  opacity: 0.8;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+.hamburger-menu {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 10%;
+  right: 5%;
+  z-index: 30;
+}
+@media (max-width: 800px) {
+  .hamburger-menu {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media (max-width: 500px) {
+  .hamburger-menu {
+    width: 25px;
+    height: 25px;
+  }
+}
+.hamburger-menu .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.hamburger-menu .menu-line {
+  width: 100%;
+  height: 4px;
+  background-color: #d3ab55;
+  transform-origin: right;
+  transition: all 0.5s 0.5s;
+}
+@media (max-width: 800px) {
+  .hamburger-menu .menu-line {
+    height: 3px;
+  }
+}
+@media (max-width: 500px) {
+  .hamburger-menu .menu-line {
+    height: 2px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
