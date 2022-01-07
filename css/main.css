@@ -240,6 +240,53 @@ html {
   margin-bottom: 3rem;
 }
 
+.about-us {
+  width: 100%;
+  height: 90vh;
+  background-color: #262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-us-left {
+  display: block;
+  width: 40%;
+  position: relative;
+  left: -15rem;
+}
+.about-us-left img {
+  width: 100%;
+}
+.about-us-right {
+  text-align: center;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 10rem;
+}
+.about-us-right > * {
+  margin-bottom: 3rem;
+}
+.about-us-right .stars {
+  margin-top: 3rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  color: #d3ab55;
+}
+.about-us-right .stars i {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+.about-us-right .description {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  color: #bbb;
+  text-align: justify;
+}
+
 .cards-wrapper {
   width: 100%;
   display: grid;
