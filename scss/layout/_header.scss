@@ -8,7 +8,7 @@
   background-repeat: none;
   background-position: center;
   background-size: cover;
-  @include b.darkBackground;
+  @include b.darkBackground(.6);
 
   .brand {
     @include b.flexLayout;
