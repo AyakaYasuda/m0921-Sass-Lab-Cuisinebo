@@ -12,13 +12,11 @@
 
   .brand {
     @include b.flexLayout;
-    position: absolute;
     z-index: 20;
     @include b.centering(15%);
   }
 
   .header-banner {
-    position: absolute;
     z-index: 20;
     @include b.centering(50%);
     text-align: center;
