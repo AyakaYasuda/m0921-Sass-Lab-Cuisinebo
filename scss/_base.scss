@@ -32,6 +32,7 @@ $sm: 640px;
 }
 
 @mixin centering($top) {
+  position: absolute;
   top: $top;
   left: 50%;
   transform: translate(-50%, -50%);
